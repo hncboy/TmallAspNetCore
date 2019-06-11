@@ -8,6 +8,7 @@
     <ProjectReference Include="..\TmallIRepository\Tmall.Core.IRepository.csproj" />
     <ProjectReference Include="..\TmallIServices\Tmall.Core.IServices.csproj" />
     <ProjectReference Include="..\TmallModels\Tmall.Core.Models.csproj" />
+    <ProjectReference Include="..\Utils\Tmall.Core.Utils.csproj" />
   </ItemGroup>
 
 </Project>

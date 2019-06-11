@@ -4,18 +4,31 @@
         <name>Tmall.Core</name>
     </assembly>
     <members>
-        <member name="M:TmallAspNetCore.Controller.UserController.#ctor(TmallAspNetCore.IServices.IUserService)">
+        <member name="T:Tmall.Core.Controller.UserController">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:Tmall.Core.Controller.UserController.#ctor(Tmall.Core.IServices.IUserService)">
             <summary>
             构造函数注入
             </summary>
             <param name="userService"></param>
         </member>
-        <member name="M:TmallAspNetCore.Controller.UserController.Login(TmallAspNetCore.Model.User)">
+        <member name="M:Tmall.Core.Controller.UserController.Login(Tmall.Core.Model.User)">
             <summary>
             用户登录
             </summary>
             <param name="userParam">用户信息</param>
             <returns>登陆成功失败信息</returns>
+        </member>
+        <member name="M:Tmall.Core.Controller.UserController.List(System.Int32,System.Int32)">
+            <summary>
+            获取全部用户
+            </summary>
+            <param name="start"></param>
+            <param name="size"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

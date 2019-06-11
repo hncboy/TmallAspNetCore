@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TmallAspNetCore.Utils
+namespace Tmall.Core.Utils
 {
     public class Result
     {

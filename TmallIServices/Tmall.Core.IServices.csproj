@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TmallModels\Tmall.Core.Models.csproj" />
+    <ProjectReference Include="..\Utils\Tmall.Core.Utils.csproj" />
   </ItemGroup>
 
 </Project>

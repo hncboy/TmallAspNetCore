@@ -1,7 +1,9 @@
 ﻿using System;
-using TmallAspNetCore.Model;
+using System.Collections.Generic;
+using Tmall.Core.Model;
+using Tmall.Core.Utils;
 
-namespace TmallAspNetCore.IRepository
+namespace Tmall.Core.IRepository
 {
     public interface IUserRepository
     {
@@ -13,11 +15,31 @@ namespace TmallAspNetCore.IRepository
         User FindByName(String name);
 
         /// <summary>
-        /// 根据用户名和密码查询用户
+        /// 用户登录
         /// </summary>
         /// <param name="name"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        User GetByNameAndPassword(String name, String password);
+        User Get(string name, string password);
+
+        /// <summary>
+        /// 用户注册
+        /// </summary>
+        /// <param name="user"></param>
+        void Add(User user);
+
+        /// <summary>
+        /// 分页查询用户
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="size"></param>
+        /// <returns></returns>
+        List<User> List(int start, int size);
+
+        /// <summary>
+        /// 查询全部用户
+        /// </summary>
+        /// <returns></returns>
+        List<User> List();
     }
 }

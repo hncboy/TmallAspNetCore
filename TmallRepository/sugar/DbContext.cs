@@ -1,10 +1,8 @@
 ﻿using SqlSugar;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
-namespace TmallAspNetCore.Repository.sugar
+namespace Tmall.Core.Repository.sugar
 {
     public class DbContext
     {

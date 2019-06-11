@@ -1,4 +1,4 @@
-﻿namespace TmallAspNetCore.Model
+﻿namespace Tmall.Core.Model
 {
     public class User
     {

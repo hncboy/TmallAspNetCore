@@ -1,9 +1,11 @@
 ﻿using System;
-using TmallAspNetCore.IRepository;
-using TmallAspNetCore.IServices;
-using TmallAspNetCore.Model;
+using System.Collections.Generic;
+using Tmall.Core.IRepository;
+using Tmall.Core.IServices;
+using Tmall.Core.Model;
+using Tmall.Core.Utils;
 
-namespace TmallAspNetCore.Services
+namespace Tmall.Core.Services
 {
     public class UserService : IUserService
     {
@@ -27,6 +29,24 @@ namespace TmallAspNetCore.Services
         public User GetByName(String name)
         {
             return userRepository.FindByName(name);
+        }
+
+        public User Get(string name, string password)
+        {
+            return userRepository.Get(name, password);
+        }
+
+        public void Add(User user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PageNavigator<User> List(int start, int size, int navigatePages)
+        {
+            List<User> allUserList = userRepository.List();
+            List<User> pageUserList = userRepository.List(start, size);
+            Page<User> page = PageUtil<User>.CalcPage(start, size, navigatePages, pageUserList, allUserList);
+            return new PageNavigator<User>(page);
         }
     }
 }

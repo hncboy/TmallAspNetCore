@@ -3,7 +3,7 @@ using TmallAspNetCore.Model;
 
 namespace TmallAspNetCore.IServices
 {
-    interface IUserService
+    public interface IUserService
     {
         /// <summary>
         /// 根据用户名查询用户是否存在

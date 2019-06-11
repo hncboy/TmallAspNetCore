@@ -3,7 +3,7 @@ using TmallAspNetCore.Model;
 
 namespace TmallAspNetCore.IRepository
 {
-    interface IUserRepository
+    public interface IUserRepository
     {
         /// <summary>
         /// 根据用户名查询用户

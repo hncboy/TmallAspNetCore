@@ -1,22 +1,26 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 
 using TmallAspNetCore.IServices;
 using TmallAspNetCore.Model;
-using TmallAspNetCore.Services;
 using TmallAspNetCore.Utils;
 
-/// <summary>
-/// User 用户
-/// </summary>
 namespace TmallAspNetCore.Controller
 {
     [Produces("application/json")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        private IUserService userService = new UserService();
+        private IUserService userService;
+
+        /// <summary>
+        /// 构造函数注入
+        /// </summary>
+        /// <param name="userService"></param>
+        public UserController(IUserService userService)
+        {
+            this.userService = userService;
+        }
 
         /// <summary>
         /// 用户登录

@@ -1,44 +1,21 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>TmallAspNetCore</name>
+        <name>Tmall.Core</name>
     </assembly>
     <members>
+        <member name="M:TmallAspNetCore.Controller.UserController.#ctor(TmallAspNetCore.IServices.IUserService)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="userService"></param>
+        </member>
         <member name="M:TmallAspNetCore.Controller.UserController.Login(TmallAspNetCore.Model.User)">
             <summary>
             用户登录
             </summary>
             <param name="userParam">用户信息</param>
             <returns>登陆成功失败信息</returns>
-        </member>
-        <member name="M:TmallAspNetCore.IRepository.IUserRepository.FindByName(System.String)">
-            <summary>
-            根据用户名查询用户
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:TmallAspNetCore.IRepository.IUserRepository.GetByNameAndPassword(System.String,System.String)">
-            <summary>
-            根据用户名和密码查询用户
-            </summary>
-            <param name="name"></param>
-            <param name="password"></param>
-            <returns></returns>
-        </member>
-        <member name="M:TmallAspNetCore.IServices.IUserService.IsExist(System.String)">
-            <summary>
-            根据用户名查询用户是否存在
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
-        </member>
-        <member name="M:TmallAspNetCore.IServices.IUserService.GetByName(System.String)">
-            <summary>
-            根据用户名查询用户
-            </summary>
-            <param name="name"></param>
-            <returns></returns>
         </member>
     </members>
 </doc>

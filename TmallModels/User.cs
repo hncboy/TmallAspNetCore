@@ -1,10 +1,7 @@
-﻿using SqlSugar;
-
-namespace TmallAspNetCore.Model
+﻿namespace TmallAspNetCore.Model
 {
     public class User
     {
-        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
 
         public string Name { get; set; }
